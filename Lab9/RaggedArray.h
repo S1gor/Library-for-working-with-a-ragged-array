@@ -14,7 +14,7 @@ int askUserSave();
 int scanRowsSize();
 int scanColsSize();
 
-int** allocateRaggedArray(RaggedArray mas);
+void allocateRaggedArray(RaggedArray& mas);
 
 void fillRaggedArrayRandom(RaggedArray mas);
 

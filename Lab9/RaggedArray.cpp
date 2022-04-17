@@ -40,7 +40,7 @@ int scanColsSize()
 	return choice;
 }
 
-int** allocateRaggedArray(RaggedArray mas)
+void allocateRaggedArray(RaggedArray& mas)
 {
 	int rows = scanRowsSize();
 	mas.data = (int**)malloc(sizeof(int*) * (rows + 1));
@@ -53,7 +53,6 @@ int** allocateRaggedArray(RaggedArray mas)
 		mas.data[i] = (int*)malloc(sizeof(int) * (cols + 1));
 		mas.data[i][cols] = NULL;
 	}
-	return mas.data;
 }
 
 void fillRaggedArrayRandom(RaggedArray mas)
@@ -197,9 +196,9 @@ void addNewRowInRaggedArray(RaggedArray& mas, int col)
 	mas.data[rows][col] = NULL;
 
 	for (int i = 0; mas.data[rows][i] != NULL; i++)
-		mas.data[rows][i] = 7;
+		mas.data[rows][i] = 5;
 }
-
+	
 void deleteLastRowInRaggedArray(RaggedArray& mas)
 {
 	int rows = 0;

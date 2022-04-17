@@ -13,7 +13,7 @@ int main()
 	switch (askUserScan())
 	{
 	case 1:
-		mas.data = allocateRaggedArray(mas);
+		allocateRaggedArray(mas);
 		fillRaggedArrayRandom(mas);
 		break;
 	case 2:
