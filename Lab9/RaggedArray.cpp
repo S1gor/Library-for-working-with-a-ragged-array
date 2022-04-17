@@ -186,8 +186,7 @@ void addNewRowInRaggedArray(RaggedArray& mas, int col)
 {
 	int rows = 0;
 
-	if (mas.data != NULL)
-		rows = getRows(mas);
+	rows = getRows(mas);
 
 	mas.data = (int**)realloc(mas.data, sizeof(int*) * (rows + 2));
 	mas.data[rows + 1] = NULL;
