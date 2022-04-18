@@ -38,4 +38,5 @@ void deleteLastRowInRaggedArray(RaggedArray& mas);
 
 void deleteRowInRaggedArray(RaggedArray& mas, int number);
 
+void swap(RaggedArray& mas, int number1, int number2);
 #endif

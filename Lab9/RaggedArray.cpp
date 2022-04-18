@@ -226,3 +226,10 @@ void deleteRowInRaggedArray(RaggedArray& mas, int number)
 
 	deleteLastRowInRaggedArray(mas);
 }
+
+void swap(RaggedArray& mas, int number1, int number2)
+{
+	int* tmp = mas.data[number1 - 1];
+	mas.data[number1 - 1] = mas.data[number2 - 1];
+	mas.data[number2 - 1] = tmp;
+}
